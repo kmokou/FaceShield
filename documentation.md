@@ -22,4 +22,4 @@
 - Ошибки записываются в stderr
 
 ## 4. Техподдержка
-Контакты: support@kmoku.ru
+Контакты: t.me/amolaspinas
