@@ -38,22 +38,22 @@ class FaceShieldGUI:
         # Title and subtitle
         tk.Label(self.root, text="FaceShield", font=("Montserrat", 20, "bold"), 
                 fg="#FF4081", bg="black").pack(pady=(20,0))
-        tk.Label(self.root, text="Защити свои данные автоматически", 
-                font=("Montserrat", 14), fg="#FF80AB", bg="black").pack(pady=(0,25))
+        tk.Label(self.root, text="ЗАЩИТИ СВОИ ДАННЫЕ ОТ ПОСТОРОННИХ ГЛАЗ", 
+                font=("Montserrat", 10), fg="#FF80AB", bg="black").pack(pady=(0,25))
         
         # Buttons frame
         self.button_frame = tk.Frame(self.root, bg="black")
         self.button_frame.pack()
         
         # Main buttons
-        self.start_button = ttk.Button(self.button_frame, text="START", style="RoundedButton.TButton",
+        self.start_button = ttk.Button(self.button_frame, text="CТАРТ", style="RoundedButton.TButton",
                                      command=self.start_faceshield)
         self.start_button.pack(pady=(0, 10))
         
-        self.quit_button = ttk.Button(self.button_frame, text="QUIT", style="RoundedButton.TButton",
+        self.quit_button = ttk.Button(self.button_frame, text="ВЫХОД", style="RoundedButton.TButton",
                                     command=self.stop_current_process)
         
-        self.register_button = ttk.Button(self.button_frame, text="REGISTER", style="RoundedButton.TButton",
+        self.register_button = ttk.Button(self.button_frame, text="РЕГИСТРАЦИЯ", style="RoundedButton.TButton",
                                         command=self.run_register_script)
         self.register_button.pack(pady=(10, 0))
         
@@ -62,7 +62,7 @@ class FaceShieldGUI:
         self.log_control_frame.pack(pady=(20, 0))
         
         # Small toggle button (now above the log box)
-        self.toggle_log_btn = ttk.Button(self.log_control_frame, text="Hide Log", style="Small.TButton",
+        self.toggle_log_btn = ttk.Button(self.log_control_frame, text="Скрыть логи", style="Small.TButton",
                                        command=self.toggle_log)
         self.toggle_log_btn.pack()
         
@@ -85,10 +85,10 @@ class FaceShieldGUI:
         self.log_visible = not self.log_visible
         if self.log_visible:
             self.log_box.pack(fill=tk.BOTH, expand=True)
-            self.toggle_log_btn.config(text="Hide Log")
+            self.toggle_log_btn.config(text="Скрыть логи")
         else:
             self.log_box.pack_forget()
-            self.toggle_log_btn.config(text="Show Log")
+            self.toggle_log_btn.config(text="Показать логи")
     
     def start_faceshield(self):
         self.show_quit_button()
